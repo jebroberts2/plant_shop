@@ -64,8 +64,8 @@ Order.all.destroy_all
 Customer.all.destroy_all
 
 # reset the database auto increment value
-%w(plants orders customers).each do |model|
-  sql = "update sqlite_sequence set seq = 0 where name = '#{model}'"
+%w(plants orders customers).each do |table|
+  sql = "ALTER TABLE #{table} AUTO_INCREMENT = 1"
   ActiveRecord::Base.connection.execute(sql)
 end
 
