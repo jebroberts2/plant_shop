@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the tree and leaf plant shop! Below is a list of actions. 
 
-Things you may want to cover:
+Note that all routes should be prepended with /api:
 
-* Ruby version
+../plants" => 'GET - returns a list of all the plants, including quantities and fun facts'
 
-* System dependencies
+../orders" => 'POST - creates an order (customer_name, plant_name, quantity, and address are required params)'
 
-* Configuration
+../orders/retrieve_by_customer" => 'GET - retrieves an order (customer_name is required, plant name is optional)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+../orders/retrieve_by_number" => 'GET - retrieves an order (order_number is required param)
